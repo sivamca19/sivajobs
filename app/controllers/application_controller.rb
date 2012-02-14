@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
        @arr=current_user.roles.map(&:name)
        if @arr.include?"admin"
-         return Admin_admin_index_path
+         return project_index_path
         else
        return dashboard_index_path
        end
