@@ -11,10 +11,15 @@ class Devise::RegistrationsController < DeviseController
   # POST /resource
   def create
     build_resource
-
     if resource.save
+      
+      if params[:profile][:job_seeker].nil?
+         role=Role.find_by_name("Employer")
+         resource.roles.push role
+       else
         role=Role.find_by_name("job_seeker")
          resource.roles.push role
+         end
       if resource.active_for_authentication?
        
         set_flash_message :notice, :signed_up if is_navigational_format?

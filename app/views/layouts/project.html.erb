@@ -30,8 +30,7 @@
 			<a href="/users/auth/facebook" title="Register or Login with Facebook"><img src="/assets/facebook.png" alt="" width="15" height="14" /></a>
 		</div>
   		<p>Recruiters: <% if current_user %><%=link_to"Logout",destroy_user_session_path, :method=>"delete", :controller=>"home",:action=>"index"%> <%else%> 
-			<a href="/users/sign_in">Log in</a> <%end%>or <a href="#">Find out more</a></p>																																															
-    <div class="inner_copy"><a href="http://www.greatdirectories.org/categories/transportation-directories/">transportation directories</a><a href="http://www.bestfreetemplates.org/categories/portal/">portal templates</a></div>
+			<a href="/users/sign_in">Log in</a> <%end%>or <a href="/admin/user_details/index">Admin</a></p>																																															
 	</div>
 	<div id="header">
 		<a href="index.html" class="logo"><img src="/assets/logo.jpg" alt="setalpm" width="149" height="28" /></a>

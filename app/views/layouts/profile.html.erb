@@ -31,7 +31,7 @@
 		</div>
   		<p>Recruiters: <% if current_user %><%=link_to"Logout",destroy_user_session_path, :method=>"delete", :controller=>"home",:action=>"index"%> <%else%> 
 			<a href="/users/sign_in">Log in</a> <%end%>or <a href="/admin/user_details/index">Admin</a></p>																																															
-    	</div>
+	</div>
 	<div id="header">
 		<a href="index.html" class="logo"><img src="/assets/logo.jpg" alt="setalpm" width="149" height="28" /></a>
 		<span class="slogan">Your Key to Success</span>
@@ -54,14 +54,15 @@
 	<center><font color="red">
   <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p></font></center>
-	<%= render :partial => "/search/search" %>
+	<%= render :partial => "/search/project_search" %>
 		      </div>
 					</div>
     
-		<div >																																																																																																																													
-
-			 
+						<br/>
+<div id="profile_blocks">																																																																																																																													
+  			<div class="profile_block">
 								<%=yield%>
+								
 							
 		</div>
 		<div id="info">

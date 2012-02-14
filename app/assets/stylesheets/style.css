@@ -175,10 +175,25 @@ padding:23px 0 0 0;
 border-top:1px solid #fff;
 border-bottom:5px solid #fff
 }
+
+.profile_blocks{
+	background-position:top left;
+background-repeat:repeat-y;
+width:900px;
+height:300px;
+}
+
 .block{
 width:215px;
 height:260px;
 float:left;
+}
+
+.profile_block{
+	width:215px;
+height:260px;
+float:left;
+margin:2px 0 15px 22px;
 }
 .lan_block{
 	width:215px;

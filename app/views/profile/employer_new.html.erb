@@ -1,0 +1,11 @@
+<%=form_for(:profile,:url=>{:action=>"create"}) do |f|%>
+<table width="100%">
+<tr><td>First Name</td><td>
+      <%= f.text_field :first_name %></td></tr>
+
+   <tr><td>Last Name</td><td>
+     <%= f.text_field :last_name%></td></tr></table>
+		 
+		 <div><%= f.submit "Update Profile" %></div>
+		 
+		 <%end%>

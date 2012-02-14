@@ -1,4 +1,12 @@
 Newjobportal::Application.routes.draw do
+  get "profile/index"
+
+  get "profile/job_seeker_new"
+
+  get "profile/employer_new"
+
+  get "profile/show"
+
   get "user_details/index"
 
   get "project/index"
