@@ -11,8 +11,8 @@
   <div><%= f.label :password_confirmation, :class=>"linkscolor"  %><br />
   <%= f.password_field :password_confirmation, :class=>"signup" %></div>
   <%= fields_for :profile do |p| %>
-<%= p.radio_button  "job_seeker", "1", :class=>"signup"  %> Job Seeker
-<%= p.radio_button  "employer", "1" %>Employer
+<%= p.radio_button  "role", "1"%> Job Seeker
+<%= p.radio_button  "role", "0"%>Employer
 <%end%>
 
   <div><%= f.submit "Sign up" %></div>

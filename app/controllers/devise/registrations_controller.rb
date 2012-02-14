@@ -12,10 +12,9 @@ class Devise::RegistrationsController < DeviseController
   def create
     build_resource
     if resource.save
-      
-      if params[:profile][:job_seeker].nil?
-         role=Role.find_by_name("Employer")
-         resource.roles.push role
+      if params[:profile][:role]==0
+        role=Role.find_by_name("Employer")
+        resource.roles.push role
        else
         role=Role.find_by_name("job_seeker")
          resource.roles.push role

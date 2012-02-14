@@ -1,5 +1,8 @@
+<center>
+<h1>Profile</h1>
 <%=form_for(:profile,:url=>{:action=>"create"}) do |f|%>
-<table width="100%">
+
+<table width="50%">
 <tr><td>First Name</td><td>
       <%= f.text_field :first_name %></td></tr>
 
@@ -7,5 +10,6 @@
      <%= f.text_field :last_name%></td></tr></table>
 		 
 		 <div><%= f.submit "Update Profile" %></div>
+		 <center>
 		 
 		 <%end%>
