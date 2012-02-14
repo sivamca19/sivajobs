@@ -5,7 +5,8 @@ before_filter:auth
   @arr=current_user.roles.map(&:name)
        if !@arr.include?"admin" then
          redirect_to "/dashboard/index"
-     end
+			 end
+			 end
 	def index
 		end
 	
