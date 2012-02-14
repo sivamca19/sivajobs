@@ -14,6 +14,8 @@ class Devise::RegistrationsController < DeviseController
 
     if resource.save
       if resource.active_for_authentication?
+        role=Role.find_by_name("job_seeker")
+         admin.roles.push role
         set_flash_message :notice, :signed_up if is_navigational_format?
         sign_in(resource_name, resource)
         respond_with resource, :location => after_sign_up_path_for(resource)

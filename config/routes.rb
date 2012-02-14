@@ -1,4 +1,6 @@
 Newjobportal::Application.routes.draw do
+  get "user_details/index"
+
   get "project/index"
 
   get "project/new"
@@ -30,12 +32,14 @@ Newjobportal::Application.routes.draw do
   get "home/create"
 
   get "home/search"
-match "Admin/admin/index" => "Admin/admin#index"
+match "admin/user_details/index" => "admin/user_details#index"
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   
   devise_for :users
   root :to => "home#index"
   devise_for :users do get '/users/sign_out' => 'devise/sessions#destroy' end
+
+    match ':controller(/:action(/:id))', :controller => /admin\/[^\/]+/
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
