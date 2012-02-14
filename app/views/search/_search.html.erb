@@ -1,0 +1,12 @@
+<img src="/assets/title.gif" alt="" width="90" height="30" />
+<%= form_for(:key_word,:url=>{:action=>"create"}) do |f| %>
+ <%= f.text_field "search_key", :class=>"first input" ,:placeholder=>"Type Job keyword"%>
+ <%= f.text_field "country_code",:class=>"second input" ,:placeholder=>"Type Country Zip Code"%>
+ <%= f.submit "Search", :class=>"button"%>
+ <div class="line">
+ <span class="exept"><%= check_box_tag "title"%>Search Title Only</span>
+					<div class="links">
+						<a href="#">US Job Search</a> | <a href="#">Advance Search Options</a>
+	</div>
+
+<%end%>

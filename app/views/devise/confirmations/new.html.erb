@@ -1,0 +1,13 @@
+<br/><font color="white">
+<h3>Resend confirmation instructions</h3><br/><br/></font>
+
+<%= form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :email, :class=>"linkscolor"  %>
+  <%= f.email_field :email, :class=>"signup" %></div>
+
+  <div><%= f.submit "Resend confirmation instructions", :class=>"signbutton" %></div>
+<% end %>
+
+<%= render "links" %>

@@ -1,0 +1,19 @@
+<center><h1><font color="gray">Sign up</font></h1></center>
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :email, :class=>"linkscolor" %><br />
+  <%= f.email_field :email, :class=>"signup" %></div>
+
+  <div><%= f.label :password , :class=>"linkscolor" %><br />
+  <%= f.password_field :password, :class=>"signup" %></div>
+
+  <div><%= f.label :password_confirmation, :class=>"linkscolor"  %><br />
+  <%= f.password_field :password_confirmation, :class=>"signup" %></div>
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+
+<%= render "links" %>
+
+

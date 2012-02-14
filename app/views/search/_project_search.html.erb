@@ -1,0 +1,10 @@
+<img src="/assets/title.gif" alt="" width="90" height="30" />
+<%= form_for(:project_key_word,:url=>{:action=>"create"}) do |f| %>
+ <%= f.text_field "search_key", :class=>"first input" ,:placeholder=>"Type Project keyword"%>
+ <%= f.text_field "country_code",:class=>"second input" ,:placeholder=>"Type Project Category"%>
+ <%= f.submit "Search", :class=>"button"%>
+ <div class="line">
+ <span class="exept"><%= check_box_tag "title"%>Search Title Only</span>
+
+
+<%end%>

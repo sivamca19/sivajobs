@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>JOB Portal</title>
+<link rel="shortcut icon" href="/assets/logo.jpg" />
+<link href="/assets/application.css" rel="stylesheet" type="text/css" media="screen" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body>
+	<div class="meta">
+		<div class="metalinks">
+			<a href="/home/index"><img src="/assets/meta1.gif" alt="" width="15" height="14" /></a>
+			<a href="#"><img src="/assets/meta2.gif" alt="" width="17" height="14" /></a>
+			<a href="#"><img src="/assets/meta3.gif" alt="" width="17" height="14" /></a>
+			<a href="/users/auth/facebook" title="Register or Login with Facebook"><img src="/assets/facebook.png" alt="" width="15" height="14" /></a>
+		</div>
+  		<p>Recruiters: <% if current_user %><%=link_to"Logout",destroy_user_session_path, :method=>"delete", :controller=>"home",:action=>"index"%> <%else%> 
+			<a href="/users/sign_in">Log in</a> <%end%>or <a href="#">Find out more</a></p>																																															
+    <div class="inner_copy"><a href="http://www.greatdirectories.org/categories/transportation-directories/">transportation directories</a><a href="http://www.bestfreetemplates.org/categories/portal/">portal templates</a></div>
+	</div>
+	<div id="header">
+		<a href="index.html" class="logo"><img src="/assets/logo.jpg" alt="setalpm" width="149" height="28" /></a>
+		<span class="slogan">Your Key to Success</span>
+		<ul id="menu">
+			<li><a href="/home/index">Home</a></li>
+			<li><a href="#">Employer</a></li>
+			<li><a href="#">Our Career</a></li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="/project/index">Project</a></li>
+			<% if current_user %>
+			<li class="last"><%=link_to"Logout",destroy_user_session_path, :method=>:delete%></li>
+			<%else%>
+			<li class="last"><a href="/users/sign_up">Register</a></li>
+			<%end%>
+		</ul>
+		<img src="/assets/bigpicture.jpg" alt="" width="892" height="303" />
+	</div>
+	<div id="content">
+	<div class="search">
+	<center><font color="red">
+  <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p></font></center>
+	<%= render :partial => "/search/project_search" %>
+		      </div>
+					</div>
+    
+						<br/>
+<div id="project_blocks">																																																																																																																													
+  			<div class="lan_block">
+				<br/>
+	<div class="title1">
+<h3 align="left" style="padding-left:20px;">Projects By LANGUAGE</h3>
+</div>
+     <ul id="lan_list">
+					<li><a href="#">Java</a></li>
+					<li><a href="/project/rails">Rails</a></li>
+					<li><a href="#">PHP</a></li>
+					<li><a href="#">ASP.net</a></li>
+					<li><a href="#">J2EE</a></li>
+					<li><a href="#">C#</a></li>
+				</ul>
+		</div>
+			 
+								<%=yield%>
+							
+		</div>
+		<div id="info">
+			<div>
+				<img src="/assets/title5.gif" alt="" width="160" height="26" />
+				<ul>
+					<li><a href="#">Maecenas hendrerit</a></li>
+					<li><a href="#">Massa ac laoreet iaculipede</a></li>
+					<li><a href="#">Convallis nonummy tellus</a></li>
+					<li><a href="#">In tincidunt mauris</a></li>
+					<li><a href="#">Maecenas hendrerit</a></li>
+					<li><a href="#">Convallis nonummy tellus</a></li>
+					<li><a href="#">In tincidunt mauris</a></li>
+				</ul>
+			</div>
+			<div>
+				<img src="/assets/title6.gif" alt="" width="160" height="26" />
+				<ul>
+					<li><a href="#">Maecenas hendrerit</a></li>
+					<li><a href="#">Massa ac laoreet iaculipede</a></li>
+					<li><a href="#">Convallis nonummy tellus</a></li>
+					<li><a href="#">In tincidunt mauris</a></li>
+					<li><a href="#">Maecenas hendrerit</a></li>
+					<li><a href="#">Convallis nonummy tellus</a></li>
+					<li><a href="#">In tincidunt mauris</a></li>
+				</ul>
+			</div>
+			<div>
+				<img src="/assets/title7.gif" alt="" width="160" height="26" />
+				<ul>
+					<li><a href="#">Maecenas hendrerit</a></li>
+					<li><a href="#">Massa ac laoreet iaculipede</a></li>
+					<li><a href="#">Convallis nonummy tellus</a></li>
+					<li><a href="#">In tincidunt mauris</a></li>
+					<li><a href="#">Maecenas hendrerit</a></li>
+					<li><a href="#">Convallis nonummy tellus</a></li>
+					<li><a href="#">In tincidunt mauris</a></li>
+				</ul>
+			</div>
+			<div>
+				<img src="/assets/title8.gif" alt="" width="160" height="26" />
+				<ul>
+					<li><a href="#">Maecenas hendrerit</a></li>
+					<li><a href="#">Massa ac laoreet iaculipede</a></li>
+					<li><a href="#">Convallis nonummy tellus</a></li>
+					<li><a href="#">In tincidunt mauris</a></li>
+					<li><a href="#">Maecenas hendrerit</a></li>
+					<li><a href="#">Convallis nonummy tellus</a></li>
+					<li><a href="#">In tincidunt mauris</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		Copyright &copy; 2012 2i-infotech.in. All rights reserved. Design by 
+		<a href="http://2i-infotech.in/" target="_blank" title="Impeccable Info Tech">2i-infotech.in</a> 																																																						
+	</div>
+</body>
+</html>
+
