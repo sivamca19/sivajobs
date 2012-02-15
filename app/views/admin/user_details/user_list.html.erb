@@ -1,0 +1,16 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+  <head>
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	  <title>user_list.html</title>
+  </head>
+  <body>
+  	<center>
+<%@user.each do |u|%>
+<table width="50%"><tr bgcolor="gray"><th>Email</th><th>No of Time Visited</th></tr><tr><td>
+<%=u.email%></td><td><%=u.sign_in_count%></td></tr></table>
+<%end%>
+</center>
+  </body>
+</html>

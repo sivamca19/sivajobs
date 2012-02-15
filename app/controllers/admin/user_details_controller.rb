@@ -9,4 +9,8 @@ class Admin::UserDetailsController < ApplicationController
 			 end
 	def index
 		end
+		
+		def user_list
+		  @user=User.find(:all,:conditions=>["id!=?",1])
+		end
 end
