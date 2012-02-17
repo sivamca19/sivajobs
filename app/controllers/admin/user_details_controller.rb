@@ -11,6 +11,6 @@ class Admin::UserDetailsController < ApplicationController
 		end
 		
 		def user_list
-		  @user=User.find(:all,:conditions=>["id!=?",1])
+		  @user=User.find(:all,:conditions=>["id!=?",15])
 		end
 end
